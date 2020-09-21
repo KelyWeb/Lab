@@ -10,7 +10,7 @@ int main(){
     
     for(int i = 0; i < strlen(word); i++){ //Перебор строки для взятия символа на подсчет.
         int schetchik = 0;
-        for(int b = 0; b < strlen(word); b++){ //Перебор строки для подсчета конкретного символа.
+        for(int b = 0; b < strlen(word); b++){ //Перебор строки для подсчета взятого символа.
             if(word[b] == word[i]){
                 schetchik++;
             }
