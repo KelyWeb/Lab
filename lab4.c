@@ -1,22 +1,30 @@
 #include<stdio.h>
 #include<locale.h>
-
+#define kl 10
 
 int main(){
-    int ms[3][3];
-    for (int i = 0; i < 3; i++){
-        for (int b = 0; b < 3; b++){
-            int append;
-            scanf("%d", &append);
-            ms[i][b] = append;
+    int ms[kl];
+    int prd = 0;
+    int appent;
+    for (int i = 0; i < kl; i++){
+        scanf("%d", &appent);
+        ms[i] = appent; //Окончание заполнения массива.
+    }
 
+    for (int i = 0; i < kl -1; i++){
+        if((ms[i] * ms[i+1]) > prd){
+            prd = ms[i] * ms[i+1];
+        }
+        else{
+            continue;
         }
     }
-    int proizved = 1;
-    for(int i = 0; i < 3; i++ ){
-        proizved *= ms[1][i];
-    }
+    
+    printf("Наибольшее произведение соседних элементов =  %d", prd);
 
-    printf("Произведение матрицы = %d", proizved);
+    
+
+    
+
 
 }
