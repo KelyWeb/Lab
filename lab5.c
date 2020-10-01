@@ -34,7 +34,7 @@ int main(){
 
 
 
-    for (int i = 0; i < kl; i++){
+    for (int i = 0; i < kl; i++){ //Вывод массива.
         for (int b = 0; b < kl; b++){
             printf("%d ", ms[i][b]);
         }
