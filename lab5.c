@@ -3,7 +3,7 @@
 #define kl 5
 
 int main(){
-    int ms[5][5];
+    int ms[5][5]; //Наполнение матрицы числами.
     for(int i = 0; i < kl; i++){
         for (int b = 0; b < kl; b++){
             int apend;
@@ -34,7 +34,7 @@ int main(){
 
 
 
-    for (int i = 0; i < kl; i++){ //Вывод массива.
+    for (int i = 0; i < kl; i++){ //Вывод матрицы для проверки.
         for (int b = 0; b < kl; b++){
             printf("%d ", ms[i][b]);
         }
