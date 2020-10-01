@@ -3,6 +3,7 @@
 #define kl 10
 
 int main(){
+    setlocale(LC_ALL, "Russian");
     int ms[kl];
     int prd = 0;
     int appent;
@@ -11,16 +12,20 @@ int main(){
         ms[i] = appent; //Окончание заполнения массива.
     }
 
+    int number;
+
     for (int i = 0; i < kl -1; i++){
         if((ms[i] * ms[i+1]) > prd){
             prd = ms[i] * ms[i+1];
+            number = i + 1;
         }
         else{
             continue;
         }
     }
     
-    printf("Наибольшее произведение соседних элементов =  %d", prd);
+    printf("Наибольшее произведение соседних элементов =  %d\n", prd);
+    printf("Индексы данных чисел: %d, %d", number, number - 1);
 
     
 
