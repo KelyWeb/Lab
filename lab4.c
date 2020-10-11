@@ -12,7 +12,7 @@ int main(){
         ms[i] = appent; //Окончание заполнения массива.
     }
 
-    int number;
+    int number; 
 
     for (int i = 0; i < kl -1; i++){
         if((ms[i] * ms[i+1]) > prd){
@@ -23,13 +23,10 @@ int main(){
             continue;
         }
     }
-    
+    for(int b = 0; b < kl; b ++){
+        printf("[%d] ", ms[b]);
+    }
+    printf("\n");
     printf("Наибольшее произведение соседних элементов =  %d\n", prd);
-    printf("Индексы данных чисел: %d, %d", number, number - 1);
-
-    
-
-    
-
-
+    printf("Индексы данных чисел: %d, %d\n", number, number - 1);
 }
