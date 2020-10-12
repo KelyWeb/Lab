@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<string.h>
 #include<stdlib.h>
 
 void reversMass(int a[], int b);
