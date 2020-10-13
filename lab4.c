@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<locale.h>
 #define kl 10
+//Программа работает с любой размероностью массива.
+//Массив принимается только одномерный.
 
 int main(){
     setlocale(LC_ALL, "Russian");
