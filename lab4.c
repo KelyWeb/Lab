@@ -25,6 +25,8 @@ int main(){
             continue;
         }
     }
+
+    printf("Введенный массив(размероность %d элементов): \n", kl);
     for(int b = 0; b < kl; b ++){
         printf("[%d] ", ms[b]);
     }
