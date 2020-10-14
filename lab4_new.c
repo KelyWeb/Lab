@@ -1,36 +1,47 @@
 #include<stdio.h>
 #include<locale.h>
 #include<stdlib.h>
-#define kl 10
+#include<conio.h>
+#define kl 20
 
-int main() {
-	setlocale(LC_ALL, "Russian");
-	int ms[kl];
-	//Наполнение массива.
-	for (int i = 0; i < kl; i++) {
-		int append;
-		scanf("%d", &append);
-		ms[i] = append;
-	}
 
-	int pass = 0;
-	int schetchik = 0;
-	for (int b = 1; b < kl; b++) {
-		if (ms[b] > ms[b-1]){
+void main(void){
+    setlocale(LC_ALL, "Russian");
+    int ms[kl];
+    for(int i = 0; i < kl; i++){
+        int append;
+        scanf("%d", &append);
+        ms[i] = append;
+    }
+    //Окончание наполнения массива.
+    
+    int schetchik = 0;
+    int t = 1;
+    point:
+    while (t < kl){
+        int a = 0;
+        while(ms[t] > ms[t-1]){
+            t++;
+            a++;
             continue;
         }
-        else{
+        if (a > 0){
             schetchik++;
-            b++;
+        }        
+        else{
+            t++;
+            continue;
         }
-	}
+    }
+        
 
-	//Вывод массива.
-	system("cls");
-	for (int x = 0; x < kl; x++) {
-		printf("[%d] ", ms[x]);
-	}
-	printf("\n");
-	printf("Количество найденных последовательных элементов: %d", schetchik);
+    system("cls");
+    for(int g = 0; g < kl; g++){
+        printf("[%d] ", ms[g]);
+    }
+    printf("\n");
 
-}
+    printf("Совпадений: %d", schetchik);
+    _getch();
+
+} 
