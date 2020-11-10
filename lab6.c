@@ -11,7 +11,7 @@ int main(void){
     scanf("%d", &s_kl);
     printf("Введите количество столбцов в матрице: ");
     scanf("%d", &st_kl);
-    system("clear");
+    system("clear"); //clear т.к. ОС LINUX
     printf("Матрица будет состоять из %d строк и %d столбцов\n", s_kl, st_kl);
 
     //Память под массив.
