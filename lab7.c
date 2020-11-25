@@ -31,15 +31,11 @@ P:
 
     printf("Введите слово, на которое хотите заменить: \n");
     fgets(s_word, SIZE, stdin);
-    //system("clear");
+    system("clear");
 
-    //printf("%d", indexN(word, f_word));
 
     int firts_num_index = indexN(word, f_word) - size_word(f_word);
     int second_num_index = firts_num_index + size_word(f_word) + 1;
-    printf("%d", firts_num_index);
-    printf("%d", second_num_index);
-    printf("%d", second_num_index + 1);
     char text[SIZE]; int b = 0;
     for(int i = 0; i < SIZE; i++, b++){
         if(i == firts_num_index){
@@ -57,7 +53,7 @@ P:
 
 
 
-    //system("clear");
+    system("clear");
     printf("\nИзмененный текст: \n%s", text);
 }
 
