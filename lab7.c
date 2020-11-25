@@ -40,16 +40,19 @@ P:
     printf("%d", firts_num_index);
     printf("%d", second_num_index);
     printf("%d", second_num_index + 1);
-    char text[SIZE];
-    for(int i = 0; i < SIZE; i++){
+    char text[SIZE]; int b = 0;
+    for(int i = 0; i < SIZE; i++, b++){
         if(i == firts_num_index){
             int fr = i;
-            for(int b = fr; b < second_num_index + 1/*i + size_word(s_word) + 1*/; b++){
+            for(int b = fr; b < i + size_word(s_word); b++){
                 text[b] = s_word[b - fr];
             }
-            i = fr + size_word(s_word) + 1;
+            i = fr + size_word(s_word) - 1;
+            b = b + size_word(f_word) - 1;
         }
-        text[i] = word[i];
+        else{
+            text[i] = word[b];
+        }
     }
 
 
