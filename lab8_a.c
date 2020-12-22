@@ -69,7 +69,6 @@ int main(){
                 char * replace = words[b];
                 words[b] = words[b - 1];
                 words[b - 1] = replace;
-                free(replace);
             }
         }
     }
@@ -81,6 +80,17 @@ int main(){
         }
     }
     printf("\n");
+    
+
+    for(int i = 0; i < 100; i++){
+        free(words[i]);
+    }
+    free(words);
+
+    for(int b = 0; b < kolvo_strok; b++){
+        free(strMs[b]);
+    }
+    free(strMs);
 }
 
 int wordSize(char * word){
