@@ -4,7 +4,7 @@
 
 int main(void){
     char * text = NULL;
-    text = malloc(sizeof(char) * SIZE);
+    text = (char *)malloc(sizeof(char) * SIZE);
     fgets(text, SIZE, stdin);
 
     int b = 0; int max_in_Num; int min_in_Num; int max = 0; int min = 10;
@@ -29,7 +29,7 @@ int main(void){
     }
 
     char * newText = NULL;
-    newText = malloc(sizeof(char) * 500);
+    newText = (char *)malloc(sizeof(char) * 500);
     int y = 0; int p = 0;
     while(text[y] != '\0'){
         if(y == max_in_Num){
