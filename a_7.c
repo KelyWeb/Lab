@@ -2,9 +2,9 @@
 #include<stdlib.h>
 
 
-int main(void){
+int main(){
     const int n = 100;
-    char * symbols = malloc(sizeof(char) * n);
+    char * symbols = (char *)malloc(sizeof(char) * n);
     printf("Введите символы (%d):\n", n);
     fgets(symbols, n, stdin);
 
