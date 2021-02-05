@@ -41,6 +41,6 @@ int func(int * ms, int size){
             }
         }
     }
-    ms = realloc(ms, sizeof(int) * (size - k));
+    ms = (int *)realloc(ms, sizeof(int) * (size - k));
     return size - k;
 }
